@@ -13,6 +13,7 @@ $(document).ready(function() {
         });
         return json;
     })();
+    console.log(json);
 
     $("a").each(function() {
         var currentCounty = this;
@@ -21,13 +22,6 @@ $(document).ready(function() {
         });
         $(this).click(function(){
             $("#countyTable").text($(this).attr("title"));
-
-            $.each(json.counties.county_name, function(i, v) {
-                if (v.county_name == currentCounty) {
-                    alert(v.averageRent);
-                    return;
-                }
-            });
         });
     });
 });
