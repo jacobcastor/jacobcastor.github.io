@@ -1,0 +1,42 @@
+header{
+    text-align: center;
+}
+body{
+    background-color: deepskyblue;
+}
+#mapdiv{
+    width: 60%;
+    height: 60%;
+    display: inline-block;
+
+}
+
+#mapDiv path{
+    fill: darkgray;
+    stroke: black;
+    stroke-width: 2px;
+}
+.spacer {
+    display: inline-block;
+    width: 7%;
+}
+th{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+td{
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center;
+}
+#table{
+    width: auto;
+    height: auto;
+    display: inline-table;
+    vertical-align: top;
+    text-align: center;
+    border: medium dashed black;
+}
+footer{
+    text-align: center;
+}
