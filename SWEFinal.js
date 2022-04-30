@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    var json = {"counties":[
+    var json = [
             {
                 "county_name": "Alamance",
                 "averageRent": "885",
@@ -701,21 +701,18 @@ $(document).ready(function() {
                 "violentCrimerate": "74.9",
                 "propertyCrimeRate": "1145.2"
             }
-        ]}
+        ];
 
     $("a").each(function() {
-        var currentCounty = this;
+        var currentCounty = this.attr("title");
         $(this).hover(function(){
             $("#countyName").text("Selected County:" + $(this).attr("title"));
         });
         $(this).click(function(){
             $("#countyTable").text($(this).attr("title"));
 
-            var obj = JSON.parse(json, function (key, value) {
-                if (key == "county_name" && value = currentCounty) {
-                    alert(value);
-                }
-            });
+            var result = json.find(t=>t.county_name === currentCounty).averageRent;
+            alert(result);
         });
     });
 });
